@@ -1,8 +1,6 @@
-<suite name="HomePageTestSuite">
-    <listeners>
-        <listener class-name="utils.TestListener"/>
-    </listeners>
-    <test name="HomePageTests">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="HomePageTestSuite">
         <classes>
             <class name="tests.HomePageTest"/>
         </classes>
