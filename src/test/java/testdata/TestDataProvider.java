@@ -4,8 +4,8 @@ import org.testng.annotations.DataProvider;
 
 public class TestDataProvider {
 
-    @DataProvider(name = "formData")
-    public Object[][] formData() {
+    @DataProvider(name = "validFormData")
+    public Object[][] validFormData() {
         return new Object[][] {
             {
                 "Mahesh Babu",
@@ -36,7 +36,13 @@ public class TestDataProvider {
                 "15/09/2025",
                 "05-09-2025", "12-09-2025",
                 "C:\\Users\\allam\\OneDrive\\Desktop\\Mahesh Babu Allam - Resume.pdf"
-            },
+            }
+        };
+    }
+
+    @DataProvider(name = "invalidFormData")
+    public Object[][] invalidFormData() {
+        return new Object[][] {
             {
                 "",
                 "invalid-email",
@@ -44,9 +50,9 @@ public class TestDataProvider {
                 "",
                 "Unknown",
                 "Funday",
-                "Neverland",
-                "Invisible",
-                "Dragon",
+                "Neverland", // intentionally invalid country
+                "Blue",
+                "Deer",
                 "99/99/9999",
                 "32/13/2025",
                 "15-09-2025", "10-09-2025",
